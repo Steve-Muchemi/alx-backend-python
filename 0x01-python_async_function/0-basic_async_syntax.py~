@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+import asyncio
+import random
+
+async def wait_random(mandatory: int = 10):
+    wait = random.uniform(0, mandatory)
+    await asyncio.sleep(wait)
+    return wait
