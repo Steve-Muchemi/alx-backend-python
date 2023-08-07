@@ -1,0 +1,14 @@
+#!/usr/bin/evn python3
+""" This module contains the function task_wait_random"""
+
+
+import asyncio
+wait_n = __import__('1-concurrent_coroutines').wait_n
+
+
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
+    """
+    Args: n - number of times the wait_n functin runs
+    Returns: a list of random float points
+    """
+    task
