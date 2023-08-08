@@ -1,14 +1,22 @@
 #!/usr/bin/env python3
-""" this module contains the async_generator function"""
+"""
+Async Generator
 
+This module defines an asynchronous generator that yields random numbers after a delay.
+"""
 
-import asyncio
 import random
-from typing import AsyncGenerator
+import asyncio
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
-    """ Asynchronous Generator yeilds floats between 0 and 10"""
-    for i in range(10):
+async def async_generator():
+    """
+    Asynchronous generator that yields random numbers after a 1-second delay.
+
+    Yields:
+        float: A random number between 0 and 10.
+    """
+    for _ in range(10):
         await asyncio.sleep(1)
         yield random.uniform(0, 10)
+
