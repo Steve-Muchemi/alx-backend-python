@@ -8,6 +8,7 @@ of parallel async comprehensions.
 
 
 import asyncio
+import time
 async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
@@ -18,12 +19,12 @@ async def measure_runtime() -> float:
     Returns:
         float: Total runtime of the parallel async comprehensions.
     """
-    start_time = asyncio.get_event_loop().time()
+    start_time = time.time()
     await asyncio.gather(
         async_comprehension(),
         async_comprehension(),
         async_comprehension(),
         async_comprehension()
     )
-    end_time = asyncio.get_event_loop().time()
+    end_time = time.time()
     return end_time - start_time
