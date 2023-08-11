@@ -2,16 +2,17 @@
 """
 Async Comprehension
 
-This module defines an asynchronous comprehension that collects random numbers.
+an asynchronous comprehension that uses random numbers.
 """
 
 
 from typing import List
 async_generator = __import__('0-async_generator').async_generator
 
+
 async def async_comprehension() -> List[float]:
     """
-    Asynchronous comprehension that collects random numbers from async_generator.
+    Asynchronous comprehension that collects random numbers.
 
     Returns:
         List[float]: A list of random numbers.
